@@ -1,6 +1,6 @@
 #import <Cocoa/Cocoa.h>
+#import "Document.h"
 
-@class Document;
 /* An instance of this subclass is created in the main nib file. */
 
 // NSDocumentController is subclassed to provide for modification of the open panel. Normally, there is no need to subclass the document controller.
@@ -21,7 +21,7 @@
 
 - (NSInteger)runModalOpenPanel:(NSOpenPanel *)openPanel forTypes:(NSArray *)types;
 
-@property (nonatomic, readonly) Document *transientDocumentToReplace;
+- (Document *)transientDocumentToReplace;
 - (void)displayDocument:(NSDocument *)doc;
 - (void)replaceTransientDocument:(NSArray *)documents;
 

@@ -1,17 +1,15 @@
 #import <Cocoa/Cocoa.h>
 
-@class Preferences;
-@class DocumentPropertiesPanelController;
-@class LinePanelController;
+@class Preferences, DocumentPropertiesPanelController, LinePanelController;
 
 @interface Controller : NSObject {
-    IBOutlet Preferences *__unsafe_unretained preferencesController;
-    IBOutlet DocumentPropertiesPanelController *__unsafe_unretained propertiesController;
-    IBOutlet LinePanelController *__unsafe_unretained lineController;
+    IBOutlet Preferences *preferencesController;
+    IBOutlet DocumentPropertiesPanelController *propertiesController;
+    IBOutlet LinePanelController *lineController;
 }
 
-@property (atomic, unsafe_unretained) Preferences *preferencesController;
-@property (atomic, unsafe_unretained) DocumentPropertiesPanelController *propertiesController;
-@property (atomic, unsafe_unretained) LinePanelController *lineController;
+@property (assign) Preferences *preferencesController;
+@property (assign) DocumentPropertiesPanelController *propertiesController;
+@property (assign) LinePanelController *lineController;
 
 @end

@@ -68,6 +68,7 @@
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super dealloc];
 }
 
 /* Do not allow selecting the "Customize" item and the separator before it. (Note that the customize item can be chosen and an action will be sent, but the selection doesn't change to it.)
@@ -92,12 +93,23 @@
 static EncodingManager *sharedInstance = nil;
 
 + (EncodingManager *)sharedInstance {
-	static dispatch_once_t onceToken;
-	dispatch_once(&onceToken, ^{
-		sharedInstance = [[self alloc] init];
-	});
-	return sharedInstance;
+    return sharedInstance ? sharedInstance : [[self alloc] init];
 }
+
+- (id)init {
+    if (sharedInstance) {		// We just have one instance of the EncodingManager class, return that one instead
+        [self release];
+    } else if (self = [super init]) {
+        sharedInstance = self;
+    }
+    return sharedInstance;
+}
+
+- (void)dealloc {
+    if (self != sharedInstance) [super dealloc];	// Don't free the shared instance
+}
+
+
 
 /* Sort using the equivalent Mac encoding as the major key. Secondary key is the actual encoding value, which works well enough. We treat Unicode encodings as special case, putting them at top of the list.
 */
@@ -124,17 +136,15 @@ static int encodingCompare(const void *firstPtr, const void *secondPtr) {
         CFStringEncoding *tmp;
         NSInteger cnt, num = 0;
         while (cfEncodings[num] != kCFStringEncodingInvalidId) num++;	// Count
-		if (num) {
-			tmp = malloc(sizeof(CFStringEncoding) * num);
-			memcpy(tmp, cfEncodings, sizeof(CFStringEncoding) * num);	// Copy the list
-			qsort(tmp, num, sizeof(CFStringEncoding), encodingCompare);	// Sort it
-			allEncodings = [[NSMutableArray alloc] init];			// Now put it in an NSArray
-			for (cnt = 0; cnt < num; cnt++) {
-				NSStringEncoding nsEncoding = CFStringConvertEncodingToNSStringEncoding(tmp[cnt]);
-				if (nsEncoding && [NSString localizedNameOfStringEncoding:nsEncoding]) [allEncodings addObject:[NSNumber numberWithUnsignedInteger:nsEncoding]];
-			}
-			free(tmp);
-		}
+        tmp = malloc(sizeof(CFStringEncoding) * num);
+        memcpy(tmp, cfEncodings, sizeof(CFStringEncoding) * num);	// Copy the list
+        qsort(tmp, num, sizeof(CFStringEncoding), encodingCompare);	// Sort it
+        allEncodings = [[NSMutableArray alloc] init];			// Now put it in an NSArray
+        for (cnt = 0; cnt < num; cnt++) {
+            NSStringEncoding nsEncoding = CFStringConvertEncodingToNSStringEncoding(tmp[cnt]);
+            if (nsEncoding && [NSString localizedNameOfStringEncoding:nsEncoding]) [allEncodings addObject:[NSNumber numberWithUnsignedInteger:nsEncoding]];
+        }
+        free(tmp);
     }
     return allEncodings;
 }
@@ -207,23 +217,24 @@ static int encodingCompare(const void *firstPtr, const void *secondPtr) {
 /* Returns the actual enabled list of encodings.
 */
 - (NSArray *)enabledEncodings {
-    static const CFStringEncoding plainTextFileStringEncodingsSupported[] = {
+    static const NSInteger plainTextFileStringEncodingsSupported[] = {
         kCFStringEncodingUnicode, kCFStringEncodingUTF8, kCFStringEncodingMacRoman, kCFStringEncodingWindowsLatin1, kCFStringEncodingMacJapanese, kCFStringEncodingShiftJIS, kCFStringEncodingMacChineseTrad, kCFStringEncodingMacKorean, kCFStringEncodingMacChineseSimp, kCFStringEncodingGB_18030_2000, -1
     };
     if (encodings == nil) {
         NSMutableArray *encs = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"Encodings"] mutableCopy];
         if (encs == nil) {
-            unsigned long encoding;
+            NSStringEncoding defaultEncoding = [NSString defaultCStringEncoding];
+            NSStringEncoding encoding;
             BOOL hasDefault = NO;
             NSInteger cnt = 0;
             encs = [[NSMutableArray alloc] init];
-            while (plainTextFileStringEncodingsSupported[cnt] != kCFStringEncodingInvalidId) {
+            while (plainTextFileStringEncodingsSupported[cnt] != -1) {
                 if ((encoding = CFStringConvertEncodingToNSStringEncoding(plainTextFileStringEncodingsSupported[cnt++])) != kCFStringEncodingInvalidId) {
                     [encs addObject:[NSNumber numberWithUnsignedInteger:encoding]];
-                    if (encoding == [NSString defaultCStringEncoding]) hasDefault = YES;
+                    if (encoding == defaultEncoding) hasDefault = YES;
                 }
             }
-            if (!hasDefault) [encs addObject:[NSNumber numberWithUnsignedInteger:[NSString defaultCStringEncoding]]];
+            if (!hasDefault) [encs addObject:[NSNumber numberWithUnsignedInteger:defaultEncoding]];
         }
         encodings = encs;
     }
@@ -278,22 +289,26 @@ static int encodingCompare(const void *firstPtr, const void *secondPtr) {
         if (([encodingNumber unsignedIntegerValue] != NoStringEncoding) && ([cell state] == NSOnState)) [encs addObject:encodingNumber];
     }
 
+    [encodings autorelease];
     encodings = encs;
 
     [self noteEncodingListChange:YES updateList:NO postNotification:YES];
 }
 
 - (IBAction)clearAll:(id)sender {
-    encodings = [NSArray array];				// Empty encodings list
+    [encodings autorelease];
+    encodings = [[NSArray array] retain];				// Empty encodings list
     [self noteEncodingListChange:YES updateList:YES postNotification:YES];
 }
 
 - (IBAction)selectAll:(id)sender {
-    encodings = [[self class] allAvailableStringEncodings];	// All encodings
+    [encodings autorelease];
+    encodings = [[[self class] allAvailableStringEncodings] retain];	// All encodings
     [self noteEncodingListChange:YES updateList:YES postNotification:YES];
 }
 
 - (IBAction)revertToDefault:(id)sender {
+    [encodings autorelease];
     encodings = nil;
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"Encodings"];
     (void)[self enabledEncodings];					// Regenerate default list

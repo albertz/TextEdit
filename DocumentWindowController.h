@@ -1,6 +1,5 @@
 #import <Cocoa/Cocoa.h>
-
-@class ScalingScrollView;
+#import "ScalingScrollView.h"
 
 @interface DocumentWindowController : NSWindowController <NSLayoutManagerDelegate, NSTextViewDelegate> {
     IBOutlet ScalingScrollView *scrollView;
@@ -11,14 +10,16 @@
 }
 
 // Convenience initializer. Loads the correct nib automatically.
+- (id)init;
 
-@property (nonatomic, readonly) NSUInteger numberOfPages;
-@property (nonatomic, readonly) NSView *documentView;
+- (NSUInteger)numberOfPages;
+
+- (NSView *)documentView;
 
 - (void)breakUndoCoalescing;
 
 /* Layout orientation sections */
-@property (nonatomic, readonly) NSArray *layoutOrientationSections;
+- (NSArray *)layoutOrientationSections;
 
 - (IBAction)chooseAndAttachFiles:(id)sender;
 

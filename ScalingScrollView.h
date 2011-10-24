@@ -15,5 +15,5 @@
 
 @protocol ScalingScrollViewDocument
 @optional
-@property (nonatomic, readonly) BOOL showsScalePopUpButton;
+- (BOOL)showsScalePopUpButton;
 @end

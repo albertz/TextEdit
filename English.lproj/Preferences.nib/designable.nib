@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1040</int>
-		<string key="IBDocument.SystemVersion">11A511</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1891</string>
-		<string key="IBDocument.AppKitVersion">1138</string>
-		<string key="IBDocument.HIToolboxVersion">566.00</string>
+		<string key="IBDocument.SystemVersion">11A392</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1294</string>
+		<string key="IBDocument.AppKitVersion">1111</string>
+		<string key="IBDocument.HIToolboxVersion">544.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">1891</string>
+			<string key="NS.object.0">1294</string>
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -73,6 +73,7 @@
 							<string key="NSFrame">{{14, 7}, {189, 32}}</string>
 							<reference key="NSSuperview" ref="651314792"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="173147218">
 								<int key="NSCellFlags">67239424</int>
@@ -101,6 +102,7 @@
 							<string key="NSFrame">{{13, 35}, {417, 523}}</string>
 							<reference key="NSSuperview" ref="651314792"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView" ref="975849364"/>
 							<object class="NSMutableArray" key="NSTabViewItems">
 								<bool key="EncodedWithXMLCoder">YES</bool>
 								<object class="NSTabViewItem" id="333645021">
@@ -1784,16 +1786,14 @@ bCBkb2N1bWVudHMuA</string>
 							</object>
 						</object>
 					</object>
-					<string key="NSFrameSize">{449, 574}</string>
+					<string key="NSFrame">{{7, 11}, {449, 574}}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="653308222"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
+				<string key="NSScreenRect">{{0, 0}, {2560, 1418}}</string>
 				<string key="NSMinSize">{154.928, 27}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
-				<int key="NSWindowCollectionBehavior">256</int>
-				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="NSUserDefaultsController" id="918954482">
 				<bool key="NSSharedInstance">YES</bool>
@@ -3509,8 +3509,6 @@ bCBkb2N1bWVudHMuA</string>
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="NSArray" key="dict.sortedKeys">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>-1.IBPluginDependency</string>
-					<string>-2.IBPluginDependency</string>
 					<string>-3.IBPluginDependency</string>
 					<string>100002.IBPluginDependency</string>
 					<string>100003.IBPluginDependency</string>
@@ -3573,117 +3571,201 @@ bCBkb2N1bWVudHMuA</string>
 					<string>100582.IBPluginDependency</string>
 					<string>100644.IBAttributePlaceholdersKey</string>
 					<string>100644.IBPluginDependency</string>
+					<string>100644.ImportedFromIB2</string>
 					<string>100645.IBPluginDependency</string>
 					<string>100646.IBAttributePlaceholdersKey</string>
 					<string>100646.IBPluginDependency</string>
+					<string>100646.ImportedFromIB2</string>
 					<string>100647.IBPluginDependency</string>
 					<string>100652.IBAttributePlaceholdersKey</string>
 					<string>100652.IBPluginDependency</string>
+					<string>100652.ImportedFromIB2</string>
 					<string>100653.IBPluginDependency</string>
 					<string>100656.IBAttributePlaceholdersKey</string>
 					<string>100656.IBPluginDependency</string>
+					<string>100656.ImportedFromIB2</string>
 					<string>100657.IBPluginDependency</string>
 					<string>13.IBPluginDependency</string>
+					<string>13.ImportedFromIB2</string>
 					<string>14.IBPluginDependency</string>
+					<string>14.ImportedFromIB2</string>
 					<string>171.IBAttributePlaceholdersKey</string>
 					<string>171.IBPluginDependency</string>
+					<string>171.ImportedFromIB2</string>
 					<string>172.IBPluginDependency</string>
+					<string>172.ImportedFromIB2</string>
+					<string>173.IBEditorWindowLastContentRect</string>
 					<string>173.IBPluginDependency</string>
+					<string>173.ImportedFromIB2</string>
+					<string>174.IBEditorWindowLastContentRect</string>
 					<string>174.IBPluginDependency</string>
+					<string>174.ImportedFromIB2</string>
 					<string>175.IBPluginDependency</string>
+					<string>175.ImportedFromIB2</string>
 					<string>177.IBAttributePlaceholdersKey</string>
 					<string>177.IBPluginDependency</string>
+					<string>177.ImportedFromIB2</string>
 					<string>179.IBPluginDependency</string>
+					<string>179.ImportedFromIB2</string>
 					<string>180.IBAttributePlaceholdersKey</string>
 					<string>180.IBPluginDependency</string>
+					<string>180.ImportedFromIB2</string>
 					<string>181.IBAttributePlaceholdersKey</string>
 					<string>181.IBPluginDependency</string>
+					<string>181.ImportedFromIB2</string>
 					<string>184.IBPluginDependency</string>
+					<string>184.ImportedFromIB2</string>
 					<string>19.IBPluginDependency</string>
+					<string>19.ImportedFromIB2</string>
 					<string>2.IBPluginDependency</string>
+					<string>2.ImportedFromIB2</string>
 					<string>21.IBPluginDependency</string>
+					<string>21.ImportedFromIB2</string>
 					<string>220.IBAttributePlaceholdersKey</string>
 					<string>220.IBPluginDependency</string>
+					<string>220.ImportedFromIB2</string>
 					<string>224.IBAttributePlaceholdersKey</string>
 					<string>224.IBPluginDependency</string>
+					<string>224.ImportedFromIB2</string>
 					<string>262.IBAttributePlaceholdersKey</string>
 					<string>262.IBPluginDependency</string>
+					<string>262.ImportedFromIB2</string>
 					<string>3.IBPluginDependency</string>
+					<string>3.ImportedFromIB2</string>
 					<string>35.IBPluginDependency</string>
+					<string>35.ImportedFromIB2</string>
 					<string>36.IBPluginDependency</string>
+					<string>36.ImportedFromIB2</string>
 					<string>365.IBPluginDependency</string>
+					<string>365.ImportedFromIB2</string>
 					<string>366.IBPluginDependency</string>
+					<string>366.ImportedFromIB2</string>
 					<string>367.IBPluginDependency</string>
+					<string>367.ImportedFromIB2</string>
 					<string>368.IBPluginDependency</string>
+					<string>368.ImportedFromIB2</string>
 					<string>369.IBPluginDependency</string>
+					<string>369.ImportedFromIB2</string>
 					<string>37.IBPluginDependency</string>
+					<string>37.ImportedFromIB2</string>
 					<string>38.IBPluginDependency</string>
+					<string>38.ImportedFromIB2</string>
 					<string>397.IBPluginDependency</string>
+					<string>397.ImportedFromIB2</string>
 					<string>398.IBPluginDependency</string>
+					<string>398.ImportedFromIB2</string>
 					<string>399.IBPluginDependency</string>
+					<string>399.ImportedFromIB2</string>
 					<string>40.IBPluginDependency</string>
+					<string>40.ImportedFromIB2</string>
 					<string>400.IBPluginDependency</string>
+					<string>400.ImportedFromIB2</string>
 					<string>401.IBPluginDependency</string>
+					<string>401.ImportedFromIB2</string>
 					<string>402.IBPluginDependency</string>
+					<string>402.ImportedFromIB2</string>
 					<string>407.IBPluginDependency</string>
+					<string>407.ImportedFromIB2</string>
 					<string>408.IBPluginDependency</string>
+					<string>408.ImportedFromIB2</string>
 					<string>409.IBPluginDependency</string>
+					<string>409.ImportedFromIB2</string>
 					<string>41.IBPluginDependency</string>
+					<string>41.ImportedFromIB2</string>
 					<string>410.IBAttributePlaceholdersKey</string>
 					<string>410.IBPluginDependency</string>
+					<string>410.ImportedFromIB2</string>
+					<string>411.IBEditorWindowLastContentRect</string>
 					<string>411.IBPluginDependency</string>
+					<string>411.ImportedFromIB2</string>
 					<string>412.IBPluginDependency</string>
+					<string>412.ImportedFromIB2</string>
 					<string>413.IBPluginDependency</string>
+					<string>413.ImportedFromIB2</string>
 					<string>417.IBPluginDependency</string>
+					<string>417.ImportedFromIB2</string>
 					<string>418.IBAttributePlaceholdersKey</string>
 					<string>418.IBPluginDependency</string>
+					<string>418.ImportedFromIB2</string>
 					<string>421.IBPluginDependency</string>
+					<string>421.ImportedFromIB2</string>
 					<string>426.IBPluginDependency</string>
+					<string>426.ImportedFromIB2</string>
 					<string>427.IBPluginDependency</string>
+					<string>427.ImportedFromIB2</string>
 					<string>428.IBPluginDependency</string>
+					<string>428.ImportedFromIB2</string>
 					<string>429.IBPluginDependency</string>
+					<string>429.ImportedFromIB2</string>
 					<string>430.IBPluginDependency</string>
+					<string>430.ImportedFromIB2</string>
 					<string>451.IBPluginDependency</string>
+					<string>451.ImportedFromIB2</string>
 					<string>452.IBPluginDependency</string>
+					<string>452.ImportedFromIB2</string>
 					<string>455.IBPluginDependency</string>
+					<string>455.ImportedFromIB2</string>
 					<string>456.IBPluginDependency</string>
+					<string>456.ImportedFromIB2</string>
 					<string>457.IBAttributePlaceholdersKey</string>
 					<string>457.IBPluginDependency</string>
+					<string>457.ImportedFromIB2</string>
+					<string>458.IBEditorWindowLastContentRect</string>
 					<string>458.IBPluginDependency</string>
+					<string>458.ImportedFromIB2</string>
 					<string>460.IBPluginDependency</string>
+					<string>460.ImportedFromIB2</string>
 					<string>464.IBPluginDependency</string>
+					<string>464.ImportedFromIB2</string>
 					<string>465.IBPluginDependency</string>
+					<string>465.ImportedFromIB2</string>
 					<string>471.IBPluginDependency</string>
+					<string>471.ImportedFromIB2</string>
 					<string>472.IBPluginDependency</string>
+					<string>472.ImportedFromIB2</string>
 					<string>491.IBAttributePlaceholdersKey</string>
 					<string>491.IBPluginDependency</string>
+					<string>491.ImportedFromIB2</string>
+					<string>492.IBEditorWindowLastContentRect</string>
 					<string>492.IBPluginDependency</string>
+					<string>492.ImportedFromIB2</string>
 					<string>52.IBAttributePlaceholdersKey</string>
 					<string>52.IBPluginDependency</string>
+					<string>52.ImportedFromIB2</string>
 					<string>539.IBAttributePlaceholdersKey</string>
 					<string>539.IBPluginDependency</string>
+					<string>539.ImportedFromIB2</string>
 					<string>54.IBAttributePlaceholdersKey</string>
 					<string>54.IBPluginDependency</string>
+					<string>54.ImportedFromIB2</string>
 					<string>540.IBAttributePlaceholdersKey</string>
 					<string>540.IBPluginDependency</string>
+					<string>540.ImportedFromIB2</string>
 					<string>543.IBAttributePlaceholdersKey</string>
 					<string>543.IBPluginDependency</string>
+					<string>543.ImportedFromIB2</string>
 					<string>547.IBAttributePlaceholdersKey</string>
 					<string>547.IBPluginDependency</string>
+					<string>547.ImportedFromIB2</string>
 					<string>549.IBAttributePlaceholdersKey</string>
 					<string>549.IBPluginDependency</string>
+					<string>549.ImportedFromIB2</string>
 					<string>551.IBAttributePlaceholdersKey</string>
 					<string>551.IBPluginDependency</string>
+					<string>551.ImportedFromIB2</string>
 					<string>569.IBPluginDependency</string>
+					<string>569.ImportedFromIB2</string>
 					<string>69.IBPluginDependency</string>
+					<string>69.ImportedFromIB2</string>
 					<string>70.IBPluginDependency</string>
+					<string>70.ImportedFromIB2</string>
+					<string>9.IBEditorWindowLastContentRect</string>
 					<string>9.IBPluginDependency</string>
 					<string>9.IBWindowTemplateEditedContentRect</string>
+					<string>9.ImportedFromIB2</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3753,6 +3835,7 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
@@ -3763,6 +3846,7 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
@@ -3773,6 +3857,7 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
@@ -3783,9 +3868,12 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3795,10 +3883,17 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
+					<string>{{123, 847}, {275, 20}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
+					<string>{{123, 822}, {275, 20}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3808,7 +3903,9 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3818,6 +3915,7 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3827,10 +3925,15 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3840,6 +3943,7 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3849,6 +3953,7 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3858,27 +3963,49 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3888,10 +4015,16 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
+					<string>{{123, 714}, {275, 71}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3901,16 +4034,27 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3920,12 +4064,20 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
+					<string>{{123, 706}, {275, 54}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3935,7 +4087,10 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
+					<string>{{123, 731}, {275, 4}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3945,6 +4100,7 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3954,6 +4110,7 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3963,6 +4120,7 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3972,6 +4130,7 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3981,6 +4140,7 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3990,6 +4150,7 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -3999,6 +4160,7 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<object class="NSMutableDictionary">
 						<string key="NS.key.0">ToolTip</string>
 						<object class="IBToolTipAttribute" key="NS.object.0">
@@ -4008,11 +4170,17 @@ bCBkb2N1bWVudHMuA</string>
 						</object>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<real value="1"/>
+					<string>{{184, 432}, {449, 574}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{184, 432}, {449, 574}}</string>
+					<real value="1"/>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -4112,10 +4280,6 @@ bCBkb2N1bWVudHMuA</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
 			<integer value="1040" key="NS.object.0"/>
-		</object>
-		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
-			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
-			<real value="0.0" key="NS.object.0"/>
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.InterfaceBuilder3</string>

@@ -9,8 +9,8 @@
 - (IBAction)changePageNumbering:(id)sender;
 - (IBAction)changeWrappingToFit:(id)sender;
 
-@property (atomic) BOOL pageNumbering;
-@property (atomic) BOOL wrappingToFit;
-@property (atomic) BOOL showsWrappingToFit;
+@property BOOL pageNumbering;
+@property BOOL wrappingToFit;
+@property BOOL showsWrappingToFit;
 
 @end

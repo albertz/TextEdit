@@ -43,12 +43,6 @@
 #import "TextEditMisc.h"
 
 @implementation MultiplePageView
-@synthesize numberOfPages;
-@synthesize printInfo;
-@synthesize pageSeparatorHeight;
-@synthesize lineColor;
-@synthesize marginColor;
-@synthesize layoutOrientation;
 
 - (id)initWithFrame:(NSRect)rect {
     if ((self = [super initWithFrame:rect])) {
@@ -87,10 +81,15 @@
 
 - (void)setPrintInfo:(NSPrintInfo *)anObject {
     if (printInfo != anObject) {
-        printInfo = [anObject copy];
+        [printInfo autorelease];
+        printInfo = [anObject copyWithZone:[self zone]];
         [self updateFrame];
         [self setNeedsDisplay:YES];	/* Because the page size or margins might change (could optimize this) */
     }
+}
+
+- (NSPrintInfo *)printInfo {
+    return printInfo;
 }
 
 - (void)setNumberOfPages:(NSUInteger)num {
@@ -106,6 +105,18 @@
     }
 }
 
+- (NSUInteger)numberOfPages {
+    return numPages;
+}
+    
+- (CGFloat)pageSeparatorHeight {
+    return 5.0;
+}
+
+- (void)dealloc {
+    [printInfo release];
+    [super dealloc];
+}
 
 - (NSSize)documentSizeInPage {
     return documentSizeForPrintInfo(printInfo);
@@ -134,16 +145,26 @@
 
 - (void)setLineColor:(NSColor *)color {
     if (color != lineColor) {
-        lineColor = [color copy];
+        [lineColor autorelease];
+        lineColor = [color copyWithZone:[self zone]];
         [self setNeedsDisplay:YES];
     }
 }
 
+- (NSColor *)lineColor {
+    return lineColor;
+}
+
 - (void)setMarginColor:(NSColor *)color {
     if (color != marginColor) {
-        marginColor = [color copy];
+        [marginColor autorelease];
+        marginColor = [color copyWithZone:[self zone]];
         [self setNeedsDisplay:YES];
     }
+}
+
+- (NSColor *)marginColor {
+    return marginColor;
 }
 
 - (void)setLayoutOrientation:(NSTextLayoutOrientation)orientation {
@@ -152,6 +173,10 @@
 
         [self updateFrame];
     }
+}
+
+- (NSTextLayoutOrientation)layoutOrientation {
+    return layoutOrientation;
 }
 
 - (void)drawRect:(NSRect)rect {
